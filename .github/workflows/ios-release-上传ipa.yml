@@ -50,7 +50,7 @@ jobs:
               ipas+=("$file")
             done < <(find . -maxdepth 1 -type f -name '*.ipa' -print0)
             if (( ${#ipas[@]} != 1 )); then
-              echo "错误：仓库根目录中应恰好包含一个 IPA，实际为 ${#ipas[@]} 个。"
+              echo "错误：仓库根目录中应恰好包含一个 IPA，实际为  ${#ipas[@]} 个。"
               exit 1
             fi
             cp "${ipas[0]}" "$RUNNER_TEMP/Runner.ipa"
